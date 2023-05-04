@@ -11,3 +11,9 @@
 .border{
     border: 1px solid gray;
 }
+
+.todolistclass{
+    color: blue;
+    font-weight: 500;
+    font-size: 20px;
+}

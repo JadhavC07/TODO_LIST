@@ -19,7 +19,7 @@ const TodoList: any = () => {
     setCount(count + 1);
   };
 
-  const todoListMap = task.map((todo, index) => <li key={index}> {todo}</li>);
+  const todoListMap = task.map((todo, index) => <li key={index} className="todolistclass"> {todo}</li>);
 
   return (
     <>
