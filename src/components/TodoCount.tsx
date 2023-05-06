@@ -7,7 +7,7 @@ const TodoCount = ({ count, setCount }: any) => {
     <>
       <button
         type="button"
-        className="btn btn-light my-2 border border-primary"
+        className="btn btn-light my-2 border border-primary rounded"
       >
         {count}
       </button>
