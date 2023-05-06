@@ -8,12 +8,15 @@ function App() {
   const [inputValue, setInputValue] = useState<string>("");
   const [count, setCount] = useState<number>(0);
   const [task, setTask] = useState<string[]>([]);
+
+ 
   const handleAddTodo = () => {
     if (inputValue.trim() === "") {
       return alert("Input in Empty");
     }
     setTask([...task, inputValue]);
     setInputValue("");
+    setCount(count + 1);
   };
 
   return (
