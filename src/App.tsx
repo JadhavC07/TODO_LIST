@@ -1,15 +1,15 @@
 import TodoInput from "./components/TodoInput";
 import TodoCount from "./components/TodoCount";
-import { useState } from "react";
+import React, { useState } from "react";
 import TodoItems from "./components/TodoItems";
 import "./App.css";
+
 
 function App() {
   const [inputValue, setInputValue] = useState<string>("");
   const [count, setCount] = useState<number>(0);
   const [task, setTask] = useState<string[]>([]);
 
- 
   const handleAddTodo = () => {
     if (inputValue.trim() === "") {
       return alert("Input in Empty");
@@ -34,6 +34,7 @@ function App() {
           <TodoCount count={count} setCount={setCount} />
         </div>
         <TodoItems task={task} />
+
       </div>
     </>
   );
