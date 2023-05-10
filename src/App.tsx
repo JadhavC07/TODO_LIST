@@ -1,6 +1,6 @@
 import TodoInput from "./components/TodoInput";
 import TodoCount from "./components/TodoCount";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import TodoItems from "./components/TodoItems";
 import "./App.css";
 
@@ -9,6 +9,9 @@ function App() {
   const [inputValue, setInputValue] = useState<string>("");
   const [count, setCount] = useState<number>(0);
   const [task, setTask] = useState<string[]>([]);
+
+  let inputEmpty= useRef().current;
+
 
   const handleAddTodo = () => {
     if (inputValue.trim() === "") {
@@ -22,7 +25,7 @@ function App() {
   return (
     <>
       <div className="mb-3 container small">
-        <TodoInput inputValue={inputValue} setInputValue={setInputValue} />
+        <TodoInput inputValue={inputValue} setInputValue={setInputValue}  ref={inputEmpty}/>
         <div className="d-flex justify-content-between">
           <button
             type="button"
