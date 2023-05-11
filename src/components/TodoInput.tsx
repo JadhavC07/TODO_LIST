@@ -5,7 +5,8 @@ const TodoInput = ({ inputValue, setInputValue }: any) => {
     setInputValue(event.target.value);
   };
   let placeHoldertext = "Add your Todo task.................Next.❓";
- 
+  
+
   return (
     <>
       <textarea
@@ -15,6 +16,7 @@ const TodoInput = ({ inputValue, setInputValue }: any) => {
         placeholder={placeHoldertext}
         value={inputValue}
         onChange={handleInput}
+        
       />
     </>
   );
